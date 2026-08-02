@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bahamdane0.github.io/amforge/sitemap.xml

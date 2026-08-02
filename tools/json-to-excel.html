@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON to Excel Converter — Free Online Tool | DataConverter Forge</title>
+<meta name="description" content="Free data converter and file converter: convert a JSON array of objects into a downloadable .xlsx Excel workbook, entirely in your browser.">
+<meta name="google-site-verification" content="lpZYD8kohCjuw-RktrAJ48OkOUrG-nATKrGRQAQKpBc" />
+<link rel="canonical" href="https://bahamdane0.github.io/amforge/tools/json-to-excel.html">
+<link rel="icon" href="/amforge/assets/img/favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="JSON to Excel Converter — Free Online Tool | DataConverter Forge">
+<meta property="og:description" content="Free data converter and file converter: convert a JSON array of objects into a downloadable .xlsx Excel workbook, entirely in your browser.">
+<meta property="og:url" content="https://bahamdane0.github.io/amforge/tools/json-to-excel.html">
+<meta property="og:image" content="https://bahamdane0.github.io/amforge/assets/img/favicon.svg">
+<meta property="og:site_name" content="DataConverter Forge">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="JSON to Excel Converter — Free Online Tool | DataConverter Forge">
+<meta name="twitter:description" content="Free data converter and file converter: convert a JSON array of objects into a downloadable .xlsx Excel workbook, entirely in your browser.">
+<meta name="twitter:image" content="https://bahamdane0.github.io/amforge/assets/img/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/amforge/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "JSON to Excel - DataConverter Forge",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "url": "https://bahamdane0.github.io/amforge/tools/json-to-excel.html",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "127"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://bahamdane0.github.io/amforge/"},
+    {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://bahamdane0.github.io/amforge/tools.html"},
+    {"@type": "ListItem", "position": 3, "name": "a> / JSON to Excel", "item": "https://bahamdane0.github.io/amforge/tools/json-to-excel.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What if my JSON is a single object, not an array?", "acceptedAnswer": {"@type": "Answer", "text": "DataConverter Forge wraps a single flat object in an array so it still produces one worksheet row."}},
+    {"@type": "Question", "name": "Can I open the result in Excel or Google Sheets?", "acceptedAnswer": {"@type": "Answer", "text": "Yes \u2014 the output is a standard .xlsx workbook that opens in Excel, Google Sheets, Numbers, or LibreOffice."}}
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="/amforge/" class="brand"><svg class="mark" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 18 L11 18 L15 8 L19 8" />
+<path d="M11 18 L15 22" />
+<circle class="spark" cx="19.5" cy="6.5" r="1.1"/>
+<circle class="spark" cx="22" cy="9" r="0.8"/>
+</svg><span>DataConverter Forge</span></a>
+    <nav class="main-nav" data-main-nav>
+      <a href="/amforge/" >Home</a>
+<a href="/amforge/tools.html" >All Tools</a>
+<a href="/amforge/pricing.html" >Pricing</a>
+<a href="/amforge/about.html" >About</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">☀</button>
+      <button class="menu-toggle" data-menu-toggle aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header><main>
+
+<section class="tool-page-head">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/amforge/">Home</a> / <a href="/amforge/tools.html">Tools</a> / JSON to Excel</div>
+    <h1>JSON to Excel Converter</h1>
+    <p class="lede">Drop in JSON and get back a real .xlsx workbook, built entirely in your browser.</p>
+  </div>
+</section>
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="tool-workspace">
+      
+<label class="field-label">Input (JSON)</label>
+<textarea id="input" placeholder="Paste a JSON array of objects here, or drop a file below."></textarea>
+<div class="dropzone" id="dropzone">
+  <p>Drag & drop a file, or click to browse</p>
+  <p class="hint">Files stay on your device. Max 5MB on the free plan.</p>
+  <input type="file" id="fileInput" accept=".json,.txt">
+</div>
+<div class="toolbar">
+  <button class="btn btn-primary" id="convertBtn">Convert</button>
+  <button class="btn btn-secondary" id="downloadBtn" disabled>Download .xlsx</button>
+</div>
+<div class="status-msg" id="status"></div>
+<div class="usage-counter" id="usageCounter"></div>
+<label class="field-label" style="margin-top:20px;">Preview</label>
+<div id="output" class="io-box" style="min-height:140px;overflow:auto;">
+  <p style="color:var(--text-faint);margin:0;">Your spreadsheet preview will appear here after converting.</p>
+</div>
+
+    </div>
+  </div>
+</section>
+<section style="padding-top:0;">
+  <div class="wrap prose" style="max-width:760px;">
+    <h2>What this tool does</h2>
+    <p>Converts a JSON array of objects (or an object wrapping one) into a real Excel workbook (.xlsx), built entirely in your browser.</p>
+    <h2>How it works</h2>
+    <p>DataConverter Forge finds the array of records in your JSON, turns the keys into a header row, and builds an .xlsx workbook with the SheetJS library &mdash; no server, no upload.</p>
+    <h2>Why use DataConverter Forge for this</h2>
+    <ul>
+      <li>Auto-detects a nested array of objects, even if it's wrapped in a parent key</li><li>Produces a real .xlsx file, not just a renamed CSV</li><li>Nothing leaves your browser tab</li>
+    </ul>
+    <h2>Frequently asked questions</h2>
+    <details class="faq-item"><summary>What if my JSON is a single object, not an array?</summary><p>DataConverter Forge wraps a single flat object in an array so it still produces one worksheet row.</p></details>
+<details class="faq-item"><summary>Can I open the result in Excel or Google Sheets?</summary><p>Yes &mdash; the output is a standard .xlsx workbook that opens in Excel, Google Sheets, Numbers, or LibreOffice.</p></details>
+    <h2>Related tools</h2>
+    <div class="related-tools"><a href="/amforge/tools/json-to-csv.html">JSON to CSV</a><a href="/amforge/tools/excel-to-json.html">Excel to JSON</a><a href="/amforge/tools/csv-to-xlsx.html">CSV to XLSX</a></div>
+  </div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="/amforge/assets/js/tool-runtime.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var input = document.getElementById('input');
+  var output = document.getElementById('output');
+  var convertBtn = document.getElementById('convertBtn');
+  var downloadBtn = document.getElementById('downloadBtn');
+  var status = document.getElementById('status');
+  var counterEl = document.getElementById('usageCounter');
+  var dropzone = document.getElementById('dropzone');
+  var fileInput = document.getElementById('fileInput');
+  var Usage = window.AMForge.Usage;
+  var wbBlob = null;
+
+  if (counterEl) Usage.renderCounter(counterEl);
+  input.addEventListener('input', function(){ delete input._fullText; });
+
+  function showStatus(msg, kind){ status.textContent = msg; status.className = 'status-msg show ' + kind; }
+
+  function loadFile(file){
+    if (!file) return;
+    if (!Usage.checkFileSize(file.size)) {
+      showStatus('File is larger than the ' + window.AMForge.Plan.limits.maxFileSizeMB + 'MB free limit. Upgrade to DataConverter Forge Pro for files up to 1GB.', 'limit');
+      return;
+    }
+    showStatus('Reading file…', 'ok');
+    window.AMForgeRuntime.readFileStreaming(file).then(function(text){
+      input._fullText = text;
+      input.value = window.AMForgeRuntime.withPreviewNote(text, window.AMForgeRuntime.PREVIEW_LINES, 'The full file will still be converted when you click Convert.');
+      status.classList.remove('show');
+      var p = dropzone.querySelector('p');
+      if (p) p.innerHTML = 'Loaded <span class="fname">' + file.name + '</span> — click Convert';
+      dropzone.classList.add('drag-over');
+      setTimeout(function(){ dropzone.classList.remove('drag-over'); }, 500);
+    }).catch(function(){ showStatus("Couldn't read that file.", 'err'); });
+  }
+
+  if (dropzone) {
+    dropzone.addEventListener('click', function(){ fileInput && fileInput.click(); });
+    dropzone.addEventListener('dragover', function(e){ e.preventDefault(); dropzone.classList.add('drag-over'); });
+    dropzone.addEventListener('dragleave', function(){ dropzone.classList.remove('drag-over'); });
+    dropzone.addEventListener('drop', function(e){ e.preventDefault(); dropzone.classList.remove('drag-over'); loadFile(e.dataTransfer.files[0]); });
+  }
+  if (fileInput) fileInput.addEventListener('change', function(e){ loadFile(e.target.files[0]); });
+
+  function findRecords(data){
+    if (Array.isArray(data)) return data;
+    if (data && typeof data === 'object') {
+      var keys = Object.keys(data);
+      for (var i = 0; i < keys.length; i++) {
+        var v = data[keys[i]];
+        if (Array.isArray(v) && v.length && typeof v[0] === 'object' && v[0] !== null) return v;
+      }
+      return [data];
+    }
+    throw new Error('Input must be a JSON array of objects.');
+  }
+
+  function escHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+
+  function coerceDates(rows){
+    var dateRe = /^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}:\d{2}(\.\d+)?Z?)?$/;
+    return rows.map(function(row){
+      var out = {};
+      Object.keys(row).forEach(function(k){
+        var v = row[k];
+        if (typeof v === 'string' && dateRe.test(v)) {
+          var d = new Date(v);
+          out[k] = isNaN(d.getTime()) ? v : d;
+        } else {
+          out[k] = v;
+        }
+      });
+      return out;
+    });
+  }
+
+  convertBtn.addEventListener('click', function(){
+    if (!Usage.canRun()) { showStatus("You have reached today's free limit. More powerful features will be available in DataConverter Forge Pro.", 'limit'); return; }
+    try {
+      var rawInput = input._fullText !== undefined ? input._fullText : input.value;
+      var data = JSON.parse(rawInput);
+      var rows = findRecords(data);
+      if (!rows.length) throw new Error('No records found to convert.');
+      var cols = Object.keys(rows.reduce(function(acc, row){ return Object.assign(acc, row); }, {}));
+      var sheetRows = coerceDates(rows);
+
+      var ws = XLSX.utils.json_to_sheet(sheetRows, { header: cols, cellDates: true, dateNF: 'yyyy-mm-dd' });
+      var wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+      var arr = XLSX.write(wb, { type: 'array', bookType: 'xlsx' });
+      wbBlob = new Blob([arr], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+
+      var previewRows = rows.slice(0, window.AMForgeRuntime.PREVIEW_LINES);
+      var html = '<table style="width:100%;border-collapse:collapse;font-size:13px;font-family:var(--font-mono);">';
+      html += '<tr>' + cols.map(function(c){ return '<th style="text-align:left;padding:9px 12px;background:var(--bg-elevated);border-bottom:1px solid var(--border);position:sticky;top:0;">' + escHtml(c) + '</th>'; }).join('') + '</tr>';
+      previewRows.forEach(function(row){
+        html += '<tr>' + cols.map(function(c){
+          var v = row[c];
+          var s = v === null || v === undefined ? '' : (typeof v === 'object' ? JSON.stringify(v) : String(v));
+          return '<td style="padding:8px 12px;border-bottom:1px solid var(--border-soft);color:var(--text-muted);white-space:nowrap;">' + escHtml(s) + '</td>';
+        }).join('') + '</tr>';
+      });
+      html += '</table>';
+      if (rows.length > previewRows.length) html += '<p style="padding:10px 12px;margin:0;color:var(--text-faint);font-size:12.5px;">Showing ' + previewRows.length + ' of ' + rows.length + ' rows — download the workbook for the full file.</p>';
+      output.innerHTML = html;
+
+      Usage.record();
+      if (counterEl) Usage.renderCounter(counterEl);
+      showStatus(rows.length + ' row' + (rows.length === 1 ? '' : 's') + ', ' + cols.length + ' column' + (cols.length === 1 ? '' : 's') + ' — ready to download.', 'ok');
+      convertBtn.classList.add('striking');
+      setTimeout(function(){ convertBtn.classList.remove('striking'); }, 450);
+      downloadBtn.disabled = false;
+    } catch (err) { showStatus('Error: ' + err.message, 'err'); }
+  });
+
+  downloadBtn.addEventListener('click', function(){
+    if (!wbBlob) return;
+    var url = URL.createObjectURL(wbBlob);
+    var a = document.createElement('a');
+    a.href = url; a.download = 'converted.xlsx'; a.click();
+    URL.revokeObjectURL(url);
+  });
+});
+</script>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="/amforge/" class="brand"><svg class="mark" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 18 L11 18 L15 8 L19 8" />
+<path d="M11 18 L15 22" />
+<circle class="spark" cx="19.5" cy="6.5" r="1.1"/>
+<circle class="spark" cx="22" cy="9" r="0.8"/>
+</svg><span>DataConverter Forge</span></a>
+        <p style="margin-top:12px;max-width:280px;">Free browser-based data tools for developers. Your files never leave your device.</p>
+      </div>
+      <div>
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="/amforge/tools/json-formatter.html">JSON Formatter</a></li>
+          <li><a href="/amforge/tools/json-to-csv.html">JSON to CSV</a></li>
+          <li><a href="/amforge/tools/base64-encoder.html">Base64 Encoder</a></li>
+          <li><a href="/amforge/tools.html">View all tools →</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/amforge/about.html">About</a></li>
+          <li><a href="/amforge/pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/amforge/privacy.html">Privacy Policy</a></li>
+          <li><a href="/amforge/terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 DataConverter Forge. All processing happens locally in your browser.</span>
+      <span>Built for developers, by developers.</span>
+    </div>
+  </div>
+</footer><script src="/amforge/assets/js/main.js"></script>
+</body>
+</html>

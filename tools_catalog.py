@@ -1,0 +1,86 @@
+"""Full catalog of DataConverter Forge tools. `live=True` tools have a working page
+under /tools/. Others are listed on /tools.html as roadmap items (no link,
+no 404) — add a page + entry in TOOL_PAGES in gen_pages.py to launch one."""
+
+CATEGORIES = ["JSON", "CSV", "Excel", "Developer"]
+
+TOOLS = [
+    # JSON
+    {"name": "JSON Formatter / Beautifier", "slug": "json-formatter", "cat": "JSON", "live": True,
+     "desc": "Format and indent messy JSON into readable, structured output."},
+    {"name": "JSON Validator", "slug": "json-validator", "cat": "JSON", "live": True,
+     "desc": "Check JSON syntax and get precise error locations."},
+    {"name": "JSON Minifier", "slug": "json-minifier", "cat": "JSON", "live": True,
+     "desc": "Strip whitespace to compress JSON to its smallest size."},
+    {"name": "JSON to CSV", "slug": "json-to-csv", "cat": "JSON", "live": True,
+     "desc": "Convert JSON arrays of objects into a downloadable CSV file."},
+    {"name": "CSV to JSON", "slug": "csv-to-json", "cat": "CSV", "live": True,
+     "desc": "Turn CSV rows into a clean JSON array of objects."},
+    {"name": "JSON Diff Checker", "slug": "json-diff", "cat": "JSON", "live": False, "desc": "Compare two JSON documents and highlight differences."},
+    {"name": "JSON Sorter", "slug": "json-sorter", "cat": "JSON", "live": False, "desc": "Sort JSON object keys alphabetically."},
+    {"name": "JSON Schema Generator", "slug": "json-schema-generator", "cat": "JSON", "live": False, "desc": "Generate a JSON Schema from sample JSON."},
+    {"name": "JSON Flatten / Unflatten", "slug": "json-flatten", "cat": "JSON", "live": False, "desc": "Flatten nested JSON into dot-notation keys, or restore it."},
+    {"name": "JSON to Excel", "slug": "json-to-excel", "cat": "JSON", "live": True, "desc": "Export JSON arrays directly to an .xlsx workbook."},
+    {"name": "Excel to JSON", "slug": "excel-to-json", "cat": "JSON", "live": True, "desc": "Convert spreadsheet rows into structured JSON."},
+
+    # CSV
+    {"name": "CSV Viewer", "slug": "csv-viewer", "cat": "CSV", "live": True,
+     "desc": "Preview CSV files as a clean, sortable table."},
+    {"name": "CSV Cleaner", "slug": "csv-cleaner", "cat": "CSV", "live": True, "desc": "Trim whitespace, fix encodings, and normalize CSV rows."},
+    {"name": "CSV Duplicate Remover", "slug": "csv-duplicate-remover", "cat": "CSV", "live": True, "desc": "Remove duplicate rows from a CSV file."},
+    {"name": "CSV Column Extractor", "slug": "csv-column-extractor", "cat": "CSV", "live": False, "desc": "Pull specific columns out of a large CSV."},
+    {"name": "CSV Filter", "slug": "csv-filter", "cat": "CSV", "live": False, "desc": "Filter CSV rows by column conditions."},
+    {"name": "CSV Sorter", "slug": "csv-sorter", "cat": "CSV", "live": False, "desc": "Sort CSV rows by any column."},
+    {"name": "CSV Transpose", "slug": "csv-transpose", "cat": "CSV", "live": False, "desc": "Flip CSV rows and columns."},
+    {"name": "CSV Statistics Analyzer", "slug": "csv-statistics", "cat": "CSV", "live": False, "desc": "Get min, max, mean, and distribution stats per column."},
+    {"name": "CSV Merger", "slug": "csv-merger", "cat": "CSV", "live": False, "desc": "Combine multiple CSV files into one, aligning columns automatically."},
+    {"name": "CSV Splitter", "slug": "csv-splitter", "cat": "CSV", "live": False, "desc": "Split a large CSV into smaller chunked files by row count."},
+    {"name": "CSV to TSV", "slug": "csv-to-tsv", "cat": "CSV", "live": False, "desc": "Convert comma-separated files to tab-separated values."},
+    {"name": "CSV Header Renamer", "slug": "csv-header-renamer", "cat": "CSV", "live": False, "desc": "Rename, reorder, or remove CSV column headers."},
+    {"name": "CSV Row Counter", "slug": "csv-row-counter", "cat": "CSV", "live": False, "desc": "Quickly count rows, columns, and empty cells in a CSV."},
+    {"name": "CSV Encoding Converter", "slug": "csv-encoding-converter", "cat": "CSV", "live": False, "desc": "Convert a CSV between UTF-8, Latin-1, and other encodings."},
+    {"name": "CSV Deduplicate by Column", "slug": "csv-dedupe-by-column", "cat": "CSV", "live": False, "desc": "Remove rows with duplicate values in a chosen column."},
+    {"name": "CSV to Markdown Table", "slug": "csv-to-markdown", "cat": "CSV", "live": False, "desc": "Turn CSV rows into a Markdown-formatted table."},
+
+    # Excel
+    {"name": "XLSX to CSV", "slug": "xlsx-to-csv", "cat": "Excel", "live": True, "desc": "Convert Excel workbooks to plain CSV."},
+    {"name": "CSV to XLSX", "slug": "csv-to-xlsx", "cat": "Excel", "live": True, "desc": "Turn CSV data into a formatted Excel workbook."},
+    {"name": "XLSX Preview", "slug": "xlsx-preview", "cat": "Excel", "live": False, "desc": "Preview Excel sheets in the browser, no upload required."},
+    {"name": "Excel Sheet Extractor", "slug": "excel-sheet-extractor", "cat": "Excel", "live": False, "desc": "Pull a single sheet out of a multi-sheet workbook."},
+    {"name": "Excel File Merger", "slug": "excel-file-merger", "cat": "Excel", "live": False, "desc": "Combine multiple Excel files into one workbook."},
+    {"name": "Excel Row Counter", "slug": "excel-row-counter", "cat": "Excel", "live": False, "desc": "Count rows, columns, and sheets in a workbook instantly."},
+    {"name": "Excel to CSV (Batch)", "slug": "excel-to-csv-batch", "cat": "Excel", "live": False, "desc": "Convert every sheet in a workbook to its own CSV file at once."},
+    {"name": "Excel Formula Stripper", "slug": "excel-formula-stripper", "cat": "Excel", "live": False, "desc": "Replace formulas with their calculated values before sharing a file."},
+    {"name": "Excel Column Extractor", "slug": "excel-column-extractor", "cat": "Excel", "live": False, "desc": "Pull specific columns out of a large workbook."},
+    {"name": "Excel Duplicate Remover", "slug": "excel-duplicate-remover", "cat": "Excel", "live": True, "desc": "Remove duplicate rows from an Excel sheet."},
+    {"name": "Excel to Markdown Table", "slug": "excel-to-markdown", "cat": "Excel", "live": False, "desc": "Turn a worksheet's rows into a Markdown-formatted table."},
+    {"name": "Excel Header Cleaner", "slug": "excel-header-cleaner", "cat": "Excel", "live": False, "desc": "Normalize messy or merged header rows in a workbook."},
+
+    # Developer
+    {"name": "JSON to TypeScript Interface", "slug": "json-to-typescript", "cat": "Developer", "live": True,
+     "desc": "Generate a TypeScript interface straight from sample JSON."},
+    {"name": "Base64 Encoder", "slug": "base64-encoder", "cat": "Developer", "live": True,
+     "desc": "Encode text or files to Base64."},
+    {"name": "Base64 Decoder", "slug": "base64-decoder", "cat": "Developer", "live": True,
+     "desc": "Decode Base64 back into readable text."},
+    {"name": "URL Encoder", "slug": "url-encoder", "cat": "Developer", "live": True,
+     "desc": "Percent-encode text for safe use in URLs."},
+    {"name": "URL Decoder", "slug": "url-decoder", "cat": "Developer", "live": True,
+     "desc": "Decode percent-encoded URL strings."},
+    {"name": "UUID Generator", "slug": "uuid-generator", "cat": "Developer", "live": True,
+     "desc": "Generate RFC 4122 v4 UUIDs, one or in bulk."},
+    {"name": "Hash Generator", "slug": "hash-generator", "cat": "Developer", "live": True,
+     "desc": "Generate MD5, SHA-1, and SHA-256 hashes of text."},
+    {"name": "Regex Tester", "slug": "regex-tester", "cat": "Developer", "live": True,
+     "desc": "Test regular expressions against sample text with live match highlighting."},
+    {"name": "Markdown Preview", "slug": "markdown-preview", "cat": "Developer", "live": True,
+     "desc": "Render Markdown into formatted HTML as you type."},
+    {"name": "SQL Formatter", "slug": "sql-formatter", "cat": "Developer", "live": False, "desc": "Beautify and indent SQL queries."},
+    {"name": "JSON to Python Dataclass", "slug": "json-to-python-dataclass", "cat": "Developer", "live": False, "desc": "Generate a Python dataclass from sample JSON."},
+    {"name": "JSON to Python Class", "slug": "json-to-python-class", "cat": "Developer", "live": False, "desc": "Generate a plain Python class from sample JSON."},
+    {"name": "JSON to Java Class", "slug": "json-to-java-class", "cat": "Developer", "live": False, "desc": "Generate a Java POJO from sample JSON."},
+    {"name": "JSON to C# Class", "slug": "json-to-csharp-class", "cat": "Developer", "live": False, "desc": "Generate a C# class from sample JSON."},
+    {"name": "JSON to Go Struct", "slug": "json-to-go-struct", "cat": "Developer", "live": False, "desc": "Generate a Go struct from sample JSON."},
+]
+
+LIVE_TOOLS = [t for t in TOOLS if t["live"]]

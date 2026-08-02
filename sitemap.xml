@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://bahamdane0.github.io/amforge/</loc><lastmod>2026-08-02</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools.html</loc><lastmod>2026-08-02</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/pricing.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/about.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/privacy.html</loc><lastmod>2026-08-02</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/terms.html</loc><lastmod>2026-08-02</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/json-formatter.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/json-validator.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/json-minifier.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/json-to-csv.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/csv-to-json.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/json-to-excel.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/excel-to-json.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/csv-viewer.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/csv-cleaner.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/csv-duplicate-remover.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/xlsx-to-csv.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/csv-to-xlsx.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/excel-duplicate-remover.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/json-to-typescript.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/base64-encoder.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/base64-decoder.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/url-encoder.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/url-decoder.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/uuid-generator.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/hash-generator.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/regex-tester.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bahamdane0.github.io/amforge/tools/markdown-preview.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>
